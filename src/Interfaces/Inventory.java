@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Inventory {
     private double maxWeight;
     private double currentWeight;
-    private ArrayList<Item> pack = new ArrayList<Item>();
+    private ArrayList<Item> inventoryList = new ArrayList<Item>();
     
     public Inventory(){
         maxWeight = 0;
@@ -28,7 +28,7 @@ public class Inventory {
     
     public String addItem(Item addMe){
         if((currentWeight + addMe.getWeight()) <= maxWeight){
-            pack.add(addMe);
+            inventoryList.add(addMe);
             currentWeight += addMe.getWeight();
             return(addMe.getName() + " has been added to inventory.");
         }
@@ -38,32 +38,52 @@ public class Inventory {
     }
     
     public String dropItem(String name){
-        for(int i = 0; i < pack.size(); i++){
-            if(name.equalsIgnoreCase(pack.get(i).getName())){
-                pack.remove(pack.get(i));
+        for(int i = 0; i < inventoryList.size(); i++){
+            if(name.equalsIgnoreCase(inventoryList.get(i).getName())){
+                inventoryList.remove(inventoryList.get(i));
                 return(name + " has been removed. Let's hope you don't need it later.");
             }
         }
         return("Unable to locate item. Are you sure you didn't leave it somewhere?");
     }
     
+     public String dropItem(int name){
+         if((name - 1) > inventoryList.size()){
+            return("Unable to locate item. Are you sure you didn't leave it somewhere?");
+         }
+         else{
+                inventoryList.remove(inventoryList.get(name-1));
+                return(name + " has been removed. Let's hope you don't need it later.");  
+         }
+     }
+    
+    public String useItem(String use){
+        for(int i=0; i<inventoryList.size(); i++){
+            if(use.equalsIgnoreCase(inventoryList.get(i).getName())){
+                inventoryList.remove(inventoryList.get(i));
+                return(use + " has been used.");
+            }
+        }
+        return (use + " cannot be used.");
+    }
+    
     public void listItems(){
-        for(int i = 0; i < pack.size(); i++){
+        for(int i = 0; i < inventoryList.size(); i++){
             if((i+1)%2 == 0){
-                System.out.print("\t" + (i+1) + ')' + pack.get(i).getName());
+                System.out.print("\t" + (i+1) + ')' + inventoryList.get(i).getName());
             }
             else{
-                System.out.print("\n" + (i+1) + ')' + pack.get(i).getName());
+                System.out.print("\n" + (i+1) + ')' + inventoryList.get(i).getName());
             }
         }
         System.out.println("For additional options, say \"examine ITEM\"");
     }
     
     public void examineItem(int index){
-        if(pack.get(index - 1) instanceof Weapon){
+        if(inventoryList.get(index - 1) instanceof Weapon){
             
         }
-        else if(pack.get(index - 1) instanceof Weapon){
+        else if(inventoryList.get(index - 1) instanceof Weapon){
             
         }
         else{
@@ -82,7 +102,7 @@ public class Inventory {
      */
     @Override
     public String toString(){
-        return("This is an inventory with " + pack.size() + " items. "
+        return("This is an inventory with " + inventoryList.size() + " items. "
                 + "\nThe maxWeight is " + maxWeight +
                 "\nThe currentWeight is " + currentWeight);
     }
