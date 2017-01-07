@@ -80,7 +80,7 @@ public class InventoryIT {
      */
     @Test
     public void testCantDropItem() {
-        System.out.println("dropItem");
+        System.out.println("cantdropItem");
         Item terry = new Item("Wrench", 1.5, false);
         String name = "Terry";
         Inventory instance = new Inventory(4);
