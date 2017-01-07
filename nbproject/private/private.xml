@@ -3,15 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/Item.java</file>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/Player.java</file>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/Armor.java</file>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/InGameFunctions.java</file>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/Weapon.java</file>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/Room.java</file>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/NPC.java</file>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/TextGame.java</file>
-            <file>file:/C:/Users/chris/Documents/NetBeansProjects/TextGame/src/textgame/Inventory.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/Players/Player.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/Items/Weapon.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/World/Worldbuilder.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/Interfaces/Inventory.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/Items/Item.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/World/Map.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/Main/TextGame.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/Players/NPC.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/Interfaces/InGameFunctions.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/World/Room.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/Items/Sword.java</file>
+            <file>file:/C:/Users/chris/Documents/GitHub/TextGame/TextMindGame/src/textgame/Items/Armor.java</file>
         </group>
     </open-files>
 </project-private>
