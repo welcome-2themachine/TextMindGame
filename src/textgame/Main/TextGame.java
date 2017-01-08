@@ -23,6 +23,8 @@ public class TextGame {
         new CustomConsole();
         Scanner kb = new Scanner(System.in);        
         System.out.println("Hello World");
+        //Console.println("Test");
+        
         //Scanner.nextLine();
         
  
