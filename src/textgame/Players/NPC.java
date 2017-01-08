@@ -13,7 +13,7 @@ import textgame.World.Room;
  */
 public class NPC{
     protected Inventory inventory;
-    protected String name;
+    protected String name, description;
     protected Room location;
     protected double attack, defense, health;
     protected Item head, clothes, armor, rightHand, leftHand, feet;

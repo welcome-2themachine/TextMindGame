@@ -19,5 +19,6 @@ public class Monster extends NPC{
         this.attack = 1.0;
         this.defense = 1.0;
         this.inventory = new Inventory(100);
+        this.description = "SHTAHP DREAKING BRIAN";
     }
 }
