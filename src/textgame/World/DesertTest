@@ -1,0 +1,9 @@
+Location: 0 0 0
+Description: there are sand dunes all about the area
+Items: sword, sand, rock, tree
+Spawns: goblin, gecko
+
+Location: 0 0 1
+Description: The door to azeroth
+Items: Portal
+Spawns: Demon
