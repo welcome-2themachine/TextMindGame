@@ -11,13 +11,10 @@ import textgame.World.Room;
  *
  * @author chris
  */
-public class Player {
-    protected Inventory inventory;
-    protected Room location, lastLocation;
-    protected double attack, defense, intellect, perception, health;
+public class Player extends NPC{
+    protected Room lastLocation;
+    protected double intellect, perception;
     protected int money;
-    protected Item head, clothes, armor, rightHand, leftHand, feet;
-    protected String name;
 
     public Player() {
         
