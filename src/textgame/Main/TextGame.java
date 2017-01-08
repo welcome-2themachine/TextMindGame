@@ -5,6 +5,7 @@ package textgame.Main;
 
 import java.util.Scanner;
 import Interfaces.*;
+import java.awt.Color;
 
 /**
  *
@@ -20,10 +21,14 @@ public class TextGame {
         //GameInterface Game = new GameInterface();
         //Game.createAndShowGUI();
         
-        new CustomConsole();
+        new Cons();
         Scanner kb = new Scanner(System.in);        
-        System.out.println("Hello World");
-        //Console.println("Test");
+        
+        Cons.print("One Word. ");
+        Cons.print("Two Words. ");
+        Cons.print("All on the same line.");
+        Cons.println("But this returns another line");
+        Cons.println("And this returns a different color", new Color(255,0,0));
         
         //Scanner.nextLine();
         

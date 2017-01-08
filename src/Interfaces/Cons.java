@@ -26,21 +26,21 @@ import javax.swing.text.StyledDocument;
  *
  * @author Brian
  */
-public class Console 
+public class Cons 
 {
     
     public void main(String[] args)
     {
-        new Console();
+        new Cons();
     }
     //declaring variables
     public JFrame frame;
-    public JTextPane console;
+    public static JTextPane Cons;
     public JTextField input;
     public JScrollPane scrollpane;    
-    public StyledDocument document;
+    public static StyledDocument document;
     
-    public Console()
+    public Cons()
     {
         try
         {
@@ -54,12 +54,12 @@ public class Console
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //close the program on window close
         
         //output pane settings
-        console = new JTextPane();  
-        console.setEditable(false);
-        console.setFont(new Font("Lucida Console", Font.PLAIN, 14));
-        console.setOpaque(false);//to view the black background, this must not be opaque
+        Cons = new JTextPane();  
+        Cons.setEditable(false);
+        Cons.setFont(new Font("Lucida Console", Font.PLAIN, 14));
+        Cons.setOpaque(false);//to view the black background, this must not be opaque
         
-        document = console.getStyledDocument();
+        document = Cons.getStyledDocument();
         
         //input window setup
         input = new JTextField();
@@ -92,7 +92,7 @@ public class Console
         });
     
         //scroll pane setup
-        scrollpane = new JScrollPane(console);
+        scrollpane = new JScrollPane(Cons);
         scrollpane.setBorder(null);
         scrollpane.setOpaque(false); //to view the black background, this must not be opaque
         scrollpane.getViewport().setOpaque(false);//to view the black background, this must not be opaque
@@ -112,23 +112,23 @@ public class Console
 
 public void scrollTop()
 {
-console.setCaretPosition(0);
+Cons.setCaretPosition(0);
 }
 
 public void scrollBottom()
 {
-console.setCaretPosition(console.getDocument().getLength());
+Cons.setCaretPosition(Cons.getDocument().getLength());
 }
 
 //print call
-public void print(String s)
+public static void print(String s)
 {
    print(s, new Color(255, 255, 255));
 }
  //print call with color
-public void print(String s, Color c)
+public static void print(String s, Color c)
 {
-    Style style = console.addStyle("Style", null);
+    Style style = Cons.addStyle("Style", null);
     StyleConstants.setForeground(style, c);
  
     try
@@ -139,17 +139,17 @@ public void print(String s, Color c)
 }
 
 //println call
-public void println(Object o)
+public static void println(Object o)
 {
     String s = o.toString();
-    println(s+"\n", new Color(255,255,255));
+    println("\n" + s, new Color(255,255,255));
 }
 
 //println call with color
-public void println(Object o, Color c)
+public static void println(Object o, Color c)
 {
     String s = o.toString();
-    print(s + "\n", c);
+    print("\n" + s, c);
 }
 
 
