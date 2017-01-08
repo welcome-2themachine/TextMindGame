@@ -12,9 +12,10 @@ import Interfaces.Inventory;
  * @author chris
  */
 public class Room {
+    int x, y, z;
+    String description;
     Inventory inventory = new Inventory(1000);
     ArrayList<NPC> mobs = new ArrayList<NPC>();
-    int x, y, z;
     Room up, down, north, south, east, west;
     
     public Room(){
