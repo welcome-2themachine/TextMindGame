@@ -20,7 +20,7 @@ public class TextGame {
         //GameInterface Game = new GameInterface();
         //Game.createAndShowGUI();
         
-        new JavaConsole();
+        new CustomConsole();
         Scanner kb = new Scanner(System.in);        
         System.out.println("Hello World");
         //Scanner.nextLine();
