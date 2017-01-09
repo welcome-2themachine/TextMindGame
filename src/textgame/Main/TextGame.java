@@ -24,13 +24,12 @@ public class TextGame {
         new Cons();
         Scanner kb = new Scanner(System.in);        
         
+        //Prevost, check out how to print stuff to the console:
         Cons.print("One Word. ");
         Cons.print("Two Words. ");
         Cons.print("All on the same line.");
         Cons.println("But this returns another line");
         Cons.println("And this returns a different color", new Color(255,0,0));
-        
-        //Scanner.nextLine();
         
  
         

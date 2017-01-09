@@ -152,39 +152,31 @@ public static void println(Object o, Color c)
     print("\n" + s, c);
 }
 
-
-public void clear()
-{
-    try
-    {
-        document.remove(0, document.getLength());
-    }
-    catch (Exception ex){}
-}
-
 //using a command
 public void doCommand(String s)
-{
+{    
 final String[] commands = s.split(" ");
 
-try
-{
-    //the clear command
-    if (commands[0].equalsIgnoreCase("clear"))
+//list possible commands
+if (commands[0].equalsIgnoreCase("clear"))
     {
-        clear();
+    CommandParsing.clear();
     }
-    else
+else if (commands[0].equalsIgnoreCase("cls"))
     {
-        println(s, new Color(255,255,255));
+    CommandParsing.clear();
+    }
+else if (commands[0].equalsIgnoreCase("move") && commands[1] != null)
+    {
+        CommandParsing.moveCommand();
+    }
+else
+    {
+    println(s, new Color(255,255,255));
     }
 }
-catch (Exception ex)
-{
-    println("Error -> " + ex.getMessage(), new Color(255,155,155));
-}
+
 
 }
 
 
-}
