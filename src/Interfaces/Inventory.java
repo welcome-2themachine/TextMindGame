@@ -12,24 +12,28 @@ import java.util.ArrayList;
  * @author chris
  */
 public class Inventory {
-    private double maxWeight;
-    private double currentWeight;
+    protected double maxWeight;
+    protected double currentWeight;
     private ArrayList<Item> inventoryList = new ArrayList<Item>();
+    protected int size;
     
     public Inventory(){
         maxWeight = 0;
         currentWeight = 0;
+        size = 0;
     }
     
     public Inventory(int maxWeight){
         this.maxWeight = maxWeight;
-        currentWeight = 0;
+        this.currentWeight = 0;
+        this.size = 0;
     }
     
     public String addItem(Item addMe){
         if((currentWeight + addMe.getWeight()) <= maxWeight){
             inventoryList.add(addMe);
             currentWeight += addMe.getWeight();
+            size = inventoryList.size();
             return(addMe.getName() + " has been added to inventory.");
         }
         else{
@@ -47,12 +51,13 @@ public class Inventory {
         return("Unable to locate item. Are you sure you didn't leave it somewhere?");
     }
     
-     public String dropItem(int name){
+    public String dropItem(int name){
          if((name - 1) > inventoryList.size()){
             return("Unable to locate item. Are you sure you didn't leave it somewhere?");
          }
          else{
                 inventoryList.remove(inventoryList.get(name-1));
+                size = inventoryList.size();
                 return(name + " has been removed. Let's hope you don't need it later.");  
          }
      }
@@ -65,6 +70,10 @@ public class Inventory {
             }
         }
         return (use + " cannot be used.");
+    }
+    
+    private Item get(int i){
+        return inventoryList.get(i);
     }
     
     public void listItems(){
@@ -94,6 +103,14 @@ public class Inventory {
     public void compareItems(int index1, int index2){
         examineItem(index1);
         examineItem(index2);
+    }
+    
+    public void dropItinerary(Inventory dropped){
+        int numItems = dropped.size;
+        for(int i = 0; i < numItems; i++){
+            addItem(dropped.get(i));
+            dropped.dropItem(i);
+        }
     }
     
     /**

@@ -12,11 +12,11 @@ import Interfaces.Inventory;
  * @author chris
  */
 public class Room {
-    int x, y, z;
-    String description;
-    Inventory inventory = new Inventory(1000);
-    ArrayList<NPC> mobs = new ArrayList<NPC>();
-    Room up, down, north, south, east, west;
+    protected int x, y, z;
+    protected String description;
+    protected Inventory inventory = new Inventory(1000);
+    protected ArrayList<NPC> mobs = new ArrayList<NPC>();
+    protected Room up, down, north, south, east, west;
     
     public Room(){
         
@@ -33,5 +33,9 @@ public class Room {
     
     private void initialize(){
         
+    }
+    
+    public Inventory getInventory(){
+        return inventory;
     }
 }

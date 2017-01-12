@@ -21,4 +21,8 @@ public class NPC{
     public NPC(){
         
     }
+    
+    public void die(){
+        location.getInventory().dropItinerary(inventory);
+    }
 }
