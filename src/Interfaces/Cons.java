@@ -76,9 +76,9 @@ public class Cons
             {
                 String text = input.getText();
                 
-                if (text.length() > 1)
+                if (text.length() > 0)
                 { 
-                    doCommand(text);
+                    CommandParsing.doCommand(text);
                     scrollBottom();
                     input.selectAll(); //highlights text when enter is pressed                    
                 }
@@ -86,8 +86,11 @@ public class Cons
         });        
         input.addKeyListener(new KeyListener()
         {
+            @Override
             public void keyPressed(KeyEvent e){}
+            @Override
             public void keyReleased(KeyEvent e){}
+            @Override
             public void keyTyped(KeyEvent e){}
         });
     
@@ -151,32 +154,6 @@ public static void println(Object o, Color c)
     String s = o.toString();
     print("\n" + s, c);
 }
-
-//using a command
-public void doCommand(String s)
-{    
-final String[] commands = s.split(" ");
-
-//list possible commands
-if (commands[0].equalsIgnoreCase("clear"))
-    {
-    CommandParsing.clear();
-    }
-else if (commands[0].equalsIgnoreCase("cls"))
-    {
-    CommandParsing.clear();
-    }
-else if (commands[0].equalsIgnoreCase("move") && commands[1] != null)
-    {
-        CommandParsing.moveCommand();
-    }
-else
-    {
-    println(s, new Color(255,255,255));
-    }
-}
-
-
 }
 
 
