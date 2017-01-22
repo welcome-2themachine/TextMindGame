@@ -124,36 +124,7 @@ Cons.setCaretPosition(Cons.getDocument().getLength());
 }
 
 //print call
-public static void print(String s)
-{
-   print(s, new Color(255, 255, 255));
-}
- //print call with color
-public static void print(String s, Color c)
-{
-    Style style = Cons.addStyle("Style", null);
-    StyleConstants.setForeground(style, c);
- 
-    try
-    {
-        document.insertString(document.getLength(), s, style);
-    }
-    catch (Exception ex){}
-}
 
-//println call
-public static void println(Object o)
-{
-    String s = o.toString();
-    println("\n" + s, new Color(255,255,255));
-}
-
-//println call with color
-public static void println(Object o, Color c)
-{
-    String s = o.toString();
-    print("\n" + s, c);
-}
 }
 
 

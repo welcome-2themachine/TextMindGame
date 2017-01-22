@@ -18,14 +18,11 @@ public class CommandParsing {
     final String[] commands = s.split(" ");
 
     //list of commands
-    if (commands[0].equalsIgnoreCase("clear"))
+    if ((commands[0].equalsIgnoreCase("clear")) || (commands[0].equalsIgnoreCase("cls")))
         {
         Commands.clear();
         }
-    else if (commands[0].equalsIgnoreCase("cls"))
-        {
-        Commands.clear();
-        }
+
     else if (commands[0].equalsIgnoreCase("move") && commands.length<2)
     {
         Commands.moveWhere();
@@ -111,7 +108,7 @@ public class CommandParsing {
         }
     else
         {
-        Cons.println(s, new Color(255,255,255));
+        Say.println(s, new Color(255,255,255));
         }
     
     
