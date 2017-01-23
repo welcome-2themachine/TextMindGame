@@ -30,8 +30,10 @@ public class TextGame {
         Say.print("All on the same line.");
         Say.println("But this returns another line");
         Say.println("And this returns a different color", new Color(255,0,0));
-        
- 
+        Say.printf("This is formatted", new Color(255, 255, 255), "Arial", 22, true, false);
+        Say.println("This returns to normal");
+        Say.normalSpeak("THIS IS THE BEGINNING OF THE WORLD.", Color.yellow, "Castellar", 24, true, false, 100);
+
         
         
 

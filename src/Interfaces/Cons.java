@@ -123,8 +123,6 @@ public void scrollBottom()
 Cons.setCaretPosition(Cons.getDocument().getLength());
 }
 
-//print call
-
 }
 
 
