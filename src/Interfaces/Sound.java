@@ -15,6 +15,8 @@ import javax.sound.sampled.Clip;
  * @author Brian
  */
 public class Sound {
+    
+    //This is how to literally play a sound. I do NOT suggest using anything over a few seconds long.
     public static synchronized void play(final String fileName) 
     {
         // Note: use .wav files             

@@ -57,6 +57,7 @@ public class Say {
        catch (Exception ex){}
    }
 
+   //the baseline print, and the common format for the window unless specified by the other methods listed below.
        public static void print(String s)
    {
       print(s, new Color(255, 255, 255), "Lucida Console", 14, false, false);
@@ -77,6 +78,7 @@ public class Say {
        print("\n" + s, c, "Lucida Console", 14, false, false);
    }
 
+   //printline with more formatting. all self explanitory
    public static void printf(Object words, Color color, String font, int fontSize, boolean bold, boolean italic)
    {
        String s = words.toString();
@@ -84,6 +86,7 @@ public class Say {
 
    }
 
+   //how to get the text to print out special-like with sound
    public static void normalSpeak(Object words, Color color, String font, int fontSize, boolean bold, boolean italic, int speed)
    { 
        String s = words.toString(); //the words to be spoken
@@ -100,8 +103,10 @@ public class Say {
                    {
                        Sound.play("talk3.wav");
                    }
-
-           Say.wait(speed);
+            //instead of writing out the try-catch code every time I want to pause, 
+            //I made a wait method inside of the Say class. 
+            //The "speed" is in miliseconds. 1000 = 1 second.
+            Say.wait(speed);
        }
        }
    }
