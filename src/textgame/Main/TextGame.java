@@ -32,7 +32,15 @@ public class TextGame {
         Say.println("And this returns a different color", new Color(255,0,0));
         Say.printf("This is formatted", new Color(255, 255, 255), "Arial", 22, true, false);
         Say.println("This returns to normal");
-        Say.normalSpeak("THIS IS THE BEGINNING OF THE WORLD.", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.normalSpeak("The world is loading", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(1000);
+        Say.normalSpeak(".", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(1500);
+        Say.normalSpeak(".", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(2000);
+        Say.normalSpeak(".", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(2500);
+        Say.normalSpeak("The world has BEGUN", Color.yellow, "Castellar", 24, true, false, 100);
 
         
         
