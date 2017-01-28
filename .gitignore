@@ -11,3 +11,4 @@ nbproject/private/private.properties
 nbproject/private/private.properties
 build/classes/textgame/Main/TextGame.class
 *.class
+*.properties
