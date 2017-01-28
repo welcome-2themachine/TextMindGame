@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Interfaces;
 
 import java.awt.BorderLayout;
@@ -40,10 +35,8 @@ public class Cons
     public JScrollPane scrollpane;    
     public static StyledDocument document;
     
-    public Cons()
-    {
-        try
-        {
+    public Cons(){
+        try{
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }
         catch (Exception ex){}
@@ -70,22 +63,18 @@ public class Cons
         input.setOpaque(false);  
         
         //input window listeners
-        input.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        input.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
                 String text = input.getText();
                 
-                if (text.length() > 0)
-                { 
+                if (text.length() > 0){ 
                     CommandParsing.doCommand(text);
                     scrollBottom();
                     input.selectAll(); //highlights text when enter is pressed                    
                 }
             }
         });        
-        input.addKeyListener(new KeyListener()
-        {
+        input.addKeyListener(new KeyListener(){
             @Override
             public void keyPressed(KeyEvent e){}
             @Override
@@ -108,21 +97,17 @@ public class Cons
         frame.setLocationRelativeTo(null); //centers window on screen        
         frame.setResizable(true);
         frame.setVisible(true);
-       
     }
     
 
 
-public void scrollTop()
-{
+public void scrollTop(){
 Cons.setCaretPosition(0);
 }
 
-public void scrollBottom()
-{
+public void scrollBottom(){
 Cons.setCaretPosition(Cons.getDocument().getLength());
 }
-
 }
 
 
