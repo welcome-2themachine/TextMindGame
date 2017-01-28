@@ -41,12 +41,7 @@ public class TextGame {
         Say.normalSpeak(".", Color.yellow, "Castellar", 24, true, false, 100);
         Say.wait(2500);
         Say.normalSpeak("The world has BEGUN", Color.yellow, "Castellar", 24, true, false, 100);
-
-        
-        
-
-        //TEST CODE
-        
+    //TEST CODE    
     }
     
 }

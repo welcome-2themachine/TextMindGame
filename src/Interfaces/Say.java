@@ -9,21 +9,8 @@ import static Interfaces.Cons.Cons;
 import static Interfaces.Cons.document;
 import static Interfaces.Say.print;
 import java.awt.Color;
-import java.awt.Font;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.sound.*;
-import javax.sound.sampled.Clip;
 import javax.swing.text.Style;
 import javax.swing.text.StyleConstants;
-import java.io.File;
-import java.io.IOException;
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
 
 /**
  *
