@@ -25,22 +25,45 @@ public class TextGame {
         Scanner kb = new Scanner(System.in);        
         
         //Prevost, check out how to print stuff to the console:
-        Say.print("One Word. ");
-        Say.print("Two Words. ");
-        Say.print("All on the same line.");
-        Say.println("But this returns another line");
-        Say.println("And this returns a different color", new Color(255,0,0));
-        Say.printf("This is formatted", new Color(255, 255, 255), "Arial", 22, true, false);
-        Say.println("This returns to normal");
-        Say.normalSpeak("The world is loading", Color.yellow, "Castellar", 24, true, false, 100);
-        Say.wait(1000);
-        Say.normalSpeak(".", Color.yellow, "Castellar", 24, true, false, 100);
-        Say.wait(1500);
-        Say.normalSpeak(".", Color.yellow, "Castellar", 24, true, false, 100);
-        Say.wait(2000);
-        Say.normalSpeak(".", Color.yellow, "Castellar", 24, true, false, 100);
-        Say.wait(2500);
-        Say.normalSpeak("The world has BEGUN", Color.yellow, "Castellar", 24, true, false, 100);
+        Sound.play("Opening.wav");
+        Say.wait(3500);
+        Say.normalSpeak("Hello", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(3000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("I know you don't remember me...", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(3000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("...but I thought I should talk to you anyway.", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(3000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("Everything is different now.", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(3000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("But it isn't all bad.", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(3000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("They've all grown up quite well.", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(3000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("And none of them have done wrong.", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(3000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("They miss you.", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(3000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("And I miss you...", Color.yellow, "Castellar", 24, true, false, 100);
+        Say.wait(5000);
+        Commands.clear();
+        Say.wait(3000);
+        Say.normalSpeak("...but it's time for you to go.", Color.yellow, "Castellar", 24, true, false, 100);
     //TEST CODE    
     }
     
